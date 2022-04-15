@@ -26,6 +26,8 @@
                         <img src="images/dropdown.png" alt="Ícone seta para baixo">
                     </button>
                 </nav>
+            </header>
+            <header id="responsive-menu">
                 <nav id="compact-menu">
                     <div id="menu-hamburguer">
                         <span class="bar"></span>
@@ -42,6 +44,21 @@
                             <img src="images/user.png" alt="Foto de perfil">
                         </span>
                     </div>     
+                </nav>
+                <nav id="menu-mobile">
+                    <ul>
+                        <li><a href="#">Apresentação</a></li>
+                        <li><a href="#">Comitês</a></li>
+                        <li><a href="#">Autores</a></li>
+                        <li><a href="#">Eixos temáticos</a></li>
+                        <li><a href="#">Trabalhos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                    <button class="language-menu">
+                        <img src="images/language-image.png" alt="Ícone do globo" id="globo">
+                        <span>PT, BR</span>
+                        <img src="images/dropdown.png" alt="Ícone seta para baixo">
+                    </button>
                 </nav>
             </header>
             <main>
@@ -116,9 +133,9 @@
                         Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in 
                         sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed 
                         id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, 
-                        vel aliquet enim accumsan sit ametl accumsant...<span id="view-more">ver mais</span><span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        vel aliquet enim accumsan sit ametl accumsant<span id="view-more">ver mais</span>
                     </p>
-                    <span class="text">
+                    <span id="text">
                         <p>
                             Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et,
                             iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet.
@@ -160,7 +177,7 @@
                         </span>
                         <div class="topic">
                             <hr>
-                            <button class="topic-button"><img src="images/criar.png" alt="Criar tópico"><span>criar tópico</span></button>
+                            <button class="topic-button" id="topic-button"><img src="images/criar.png" alt="Criar tópico"><span>criar tópico</span></button>
                         </div>
                     </div>
 
@@ -171,7 +188,7 @@
                             <input type="text" name="nome" class="form-control" id="name" placeholder="Defina um tópico sucinto para notificar os autores..."><br>
                             <label for="conteudo">Conteúdo</label><br>
                             <textarea name="conteudo"></textarea>
-                            <div><span><img src="images/bold.png" alt="Negrito"><img src="images/italic.png" alt="Itálico"></span><button>Enviar</button></div>
+                            <div><span><img src="images/bold.png" alt="Negrito"><img src="images/italic.png" alt="Itálico"></span><span id="btnEnviar">Enviar</span></div>
                         </form>
                         <hr>
                     </div>
@@ -182,26 +199,41 @@
                         <div id="link-jobs"><a href="#">Descubra outros trabalhos!</a></div>
                         <div class="topic">
                             <hr>
-                            <button class="topic-button"><span>criar novo tópico</span></button>
+                            <button class="topic-button" id="btnNovoTopico"><span>criar novo tópico</span></button>
                         </div>
                     </div> 
-                    <section id="section-opaca">
-                        <div>
+
+                    <section id="hidden">
+                        <div id="first">
                             <img src="images/certo.png" alt="Visto">
-                            <h3>Aguardando feedback dos autores</h3>
+                            <div>Aguardando feedback dos autores</div>
                             <a href="#">Editar tópico</a>
                         </div>
+
+                        <div id="last">
+                            <h3>Assunto da pergunta aparece aqui</h3>
+                            <h4>Carlos Henrique Santos</h4>
+                            <p>
+                                Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
+                            </p>
+                        </div>
+                    </section>  
+
+                    <section>
+                        <h3>Assunto da pergunta aparece aqui</h3>
+                        <h4>Carlos Henrique Santos</h4>
+                        <p>
+                            Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
+                        </p>
+                        <span>
+                            <img src="images/mais-informacoes.png" alt="Mais informações">
+                            <img src="images/favoritar.png" alt="Favoritar">
+                            <span>1 like</span>
+                            <span>1 resposta</span>
+                        </span>
                     </section>
 
-                    <section id="section-hidden"> 
-                        <h3>Assunto da pergunta aparece aqui</h3>
-                        <h4>Carlos Henrique Santos</h4>
-                        <p>
-                            Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
-                        </p>
-                    </section>
-                    
-                    <section>
+                    <section id="question">
                         <h3>Assunto da pergunta aparece aqui</h3>
                         <h4>Carlos Henrique Santos</h4>
                         <p>
@@ -210,24 +242,71 @@
                         <span>
                             <img src="images/mais-informacoes.png" alt="Mais informações">
                             <img src="images/favoritar.png" alt="Favoritar">
-                            <span>1 like</span>
-                            <span>1 resposta</span>
+                            <span id="like">1 like</span>
+                            <span id="resp">1 resposta</span>
                         </span>
                     </section>
-                    <section>
-                        <h3>Assunto da pergunta aparece aqui</h3>
-                        <h4>Carlos Henrique Santos</h4>
-                        <p>
-                            Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
-                        </p>
-                        <span>
-                            <img src="images/mais-informacoes.png" alt="Mais informações">
-                            <img src="images/favoritar.png" alt="Favoritar">
-                            <span>1 like</span>
-                            <span>1 resposta</span>
-                        </span>
-                    </section>
+                    <div id="answer">
+                        <section class="answer">
+                            <div>
+                                <h4>Adriano da Silva</h4>
+                                <span>Autor<img src="images/certo-laranja.png" alt="Visto"></span>
+                            </div>
+                            <p>
+                                Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                            </p>
+                        </section>
+    
+                        <section class="answer" id="color-white">
+                            <div>
+                                <h4>Carlos Henrique Santos</h4>
+                            </div>
+                            <p>
+                                Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo. 
+                            </p>
+                            <p>
+                                Obrigada pela resposta, muito interessante o seu trabalho!
+                            </p>
+                        </section>
+    
+                        <section class="answer">
+                            <div>
+                                <h4>Carmila Ferreira Andrade</h4>
+                                <span>Coautor<img src="images/certo-laranja.png" alt="Visto"></span>
+                            </div>
+                            <p>
+                                Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                            </p>
+                            <p>
+                                Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                            </p>
+                        </section>
+                        <section class="answer">
+                            <div>
+                                <h4>Ana Carolina</h4>
+                                <span>Coautor<img src="images/certo-laranja.png" alt="Visto"></span>
+                            </div>
+                            <p>
+                                Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                            </p>
+                        </section>
+                    </div>
                 </article>
+                <footer>
+                    <div>
+                        <img src="images/imagem-footer-2.png" alt="Rodapé">
+                        <div>Saiba mais</div>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>Preservar a memória do evento e ampliar o acesso ao conhecimento científico</strong> gerado em eventos é a razão de ser da plataforma Galoá Proceedings
+                        </p>
+                        <p>
+                            Os trabalhos publicados aqui têm maior alcance e ficam disponíveis para toda a comunidade científica, mantendo aceso o debate científico fomentado pelos encontros e aumentando o impacto do evento.
+                        </p>
+                    </div> 
+                </footer>
             </main>
+            <script src="javascript/script.js"></script>      
     </body>
 </html>

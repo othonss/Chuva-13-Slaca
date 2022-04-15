@@ -112,15 +112,22 @@
     }
 
     main {
-        padding-top: 73px;
         margin-left: 0px;
      }
+
+    #title-menu {
+         display: none;
+    }
 
     #title-content {
         display: none;
     }
 
     #normal-menu {
+        display: none;
+    }
+
+    #normal-menu img {
         display: none;
     }
 
@@ -136,10 +143,6 @@
         height: 68px;
         background: linear-gradient(0deg,#ED7839 0%,#FFB455 100%);
     }
-
-   /* #menu{
-        display: flex;
-    }*/
 
     #compact-menu img {
         border-radius: 30px;
@@ -162,4 +165,20 @@
     #detalhes div{
         overflow: hidden;
     }  
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer div div {
+        width: auto;
+    }
+
+    footer div p {
+        width: auto;
+        margin: 25px 0 25px 20px;
+    }
+
+    
 }
