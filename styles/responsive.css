@@ -45,10 +45,9 @@
     }
 
     #detalhes{
-        height: 200px;
+        height: auto;
         margin-left: 0;
         max-width: 100%;
-        overflow: hidden;
     }  
 
     #detalhes div{
