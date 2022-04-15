@@ -12,8 +12,7 @@
     margin: 0;
 }
 
-/* Menu */
-
+/* Menu fixo layout desktop */
 #menu{
     height: 100%;
     width: auto;
@@ -39,11 +38,6 @@
 
 .language-menu img {
     line-height: 34px;
-}
-
-#compact-menu {
-    visibility: hidden;
-    display: none;
 }
 
 #title-menu{
@@ -114,24 +108,32 @@
     padding-left: 29px;
 }
 
+/* Menu layout mobile */
+#compact-menu {
+    visibility: hidden;
+    display: none;
+}
+
 #menu-hamburguer{
     width: 25px;
     height: 29px;
     cursor: pointer;
     margin-top: 5px;
-    cursor: pointer;
 }
 
 #menu-mobile {
-    padding-top: 30px;
+    padding: 30px 0px 10px 0px;
     font-family: 'Roboto';
     text-align: center;
     width: 100%;
     height: auto;
-    background: linear-gradient(0deg,#ED7839 100%,#FFB455 0%);
+    background: linear-gradient(180deg,#ED7839 100%,#FFB455 100%);
     display: none;
 }
 
+#menu-mobile ul {
+    padding: 0;
+}
 
 #menu-mobile ul li {
     list-style: none;
@@ -143,13 +145,22 @@
     color: #fff;
 }
 
+.bar{
+    display: block;
+    width: 26px;
+    height: 5px;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 8px;
+}
+
 /* Conteúdo */
 
 main {
     margin-left: 220px;
  }
 
- /* Parte superior */
+ /* Informações do conteúdo e de usuário */
  #content{
     background: #FDF1EB;
     display: flex;
@@ -250,17 +261,7 @@ main {
     position: relative;
 }
 
-
-.bar{
-    display: block;
-    width: 26px;
-    height: 5px;
-    background: #fff;
-    margin-bottom: 4px;
-    border-radius: 8px;
-}
-
-/* Parte do título da seção e citação*/
+/* Título do conteúdo e opções de download e citação */
 main section, main article {
     margin: 20px 45px 0px 36px;
 }
@@ -302,6 +303,10 @@ h1{
     border: 1px solid transparent;
 }
 
+#top-section>div div:hover{
+    background:#ffb455;
+}
+
 #top-section>div div:nth-child(1){
     width: 120px;
     color: #fff;
@@ -335,7 +340,16 @@ h1{
     border: 1px solid transparent;
 }
 
-/* Parte artigo e detalhes */
+#quote a{
+    color:#ED7839;
+    text-decoration: none;
+}
+
+#quote a:hover{
+    text-decoration: underline;
+}
+
+/* "Vídeo" e detalhes */
 #video{
     display: grid;
     grid-template: "video detalhes";
@@ -475,10 +489,6 @@ h1{
     margin-right: 50px;
 }
 
-#presentation {
-    
-}
-
 #presentation span{
     display: flex;
     width: 100%;
@@ -576,7 +586,7 @@ h1{
     margin-bottom: 30px !important;
 }
 
-/* Sucesso */
+/* Feedback */
 
 #sucess{
     display: none;
@@ -680,7 +690,6 @@ h1{
     line-height: 19px;
     color: #ED7839;
 }
-
 
 hr{
     width: 100%;
@@ -815,6 +824,8 @@ div .answer div{
     margin-left: 33px;
 }
 
+/* Rodapé */
+
 footer{
     border-top: 1px solid #CCCCCC;
     margin: 60px 46px 30px 15px;
@@ -831,7 +842,6 @@ footer div div {
     background: #71478e;
     border-radius: 4px;
     line-height: 30px;
-    color: #fff;
     font-family: "Quicksand";
     text-align: center;
     margin-left: 15px;
@@ -847,4 +857,11 @@ footer div p {
     text-align: justify;
 }
 
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
 
+footer a:hover {
+    text-decoration:underline;
+}

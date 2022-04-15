@@ -1,17 +1,6 @@
 var viewMore = document.getElementById("view-more")
 var btn = document.querySelector('#view-more')
 var container = document.querySelector('#text')
-container.style.display = 'none'
-
-btn.addEventListener('click', function(){
-    if(container.style.display === 'none'){
-        container.style.display = 'block'
-        viewMore.style.display = 'none'
-    }else{
-        container.style.display = 'none'       
-    }
-})
-
 var sucess = document.querySelector('#sucess')
 var form = document.querySelector('#form')
 var presentation = document.querySelector('#presentation')
@@ -26,6 +15,7 @@ var btnMostrarMenu = document.querySelector('#menu-hamburguer')
 var normalMenu = document.querySelector('#menu-mobile')
 var validador = 1
 
+container.style.display = 'none'
 sucess.style.display = 'none'
 form.style.display = 'none'
 presentation.style.display = 'none'
@@ -33,6 +23,15 @@ hidden.style.display = 'none'
 answer.style.display = 'none'
 presentation.style.display = 'block'
 sucess.style.display = 'none'
+
+btn.addEventListener('click', function(){
+    if(container.style.display === 'none'){
+        container.style.display = 'block'
+        viewMore.style.display = 'none'
+    }else{
+        container.style.display = 'none'       
+    }
+})
 
 btnTopico.addEventListener('click', function(){
     if(form.style.display === 'none'){
@@ -64,8 +63,8 @@ btnMostrarResposta.addEventListener('click', function(){
         like.innerHTML='4 likes'
     }else{
         answer.style.display = 'none'
-        btnMostrarResposta.innerHTML='1 respostas'
-        like.innerHTML='1 likes'
+        btnMostrarResposta.innerHTML='1 resposta'
+        like.innerHTML='1 like'
     }
 }) 
 
@@ -78,5 +77,13 @@ btnMostrarMenu.addEventListener('click', function(){
         validador = 1
     }
 }) 
+
+document.body.onresize = function() {
+    if (document.body.clientWidth > 769) {
+        normalMenu.style.display = 'none'
+    }
+};
+
+
 
 
