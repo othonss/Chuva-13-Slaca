@@ -2,7 +2,7 @@
 
 Um exercício elaborado para processo seletivo.
 
-## Tecnologias aprendidas
+## Tecnologias utilizadas
 - HTML
 - CSS
 - JavaScript
